@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c1013">
+  <meta name="description" content="Понятный интерактивный гид по GitHub: репозитории, ветки, pull request, автоматизация и первые шаги.">
+  <title>GitHub Guide — от идеи до первого коммита</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#overview" class="brand" aria-label="GitHub Guide, главная">
+        <span class="brand-icon" aria-hidden="true"><svg viewBox="0 0 28 28"><circle cx="8" cy="6" r="3"/><circle cx="20" cy="8" r="3"/><circle cx="8" cy="22" r="3"/><path d="M8 9v10m12-8v2a5 5 0 0 1-5 5H8"/></svg></span>
+        <span>GitHub<span class="brand-light">Guide</span><span class="brand-dot">.</span></span>
+      </a>
+      <button class="menu-toggle icon-button" aria-label="Открыть меню" aria-expanded="false" aria-controls="navigation"><span></span><span></span></button>
+      <nav id="navigation" class="main-nav" aria-label="Главы руководства">
+        <a href="#overview" data-nav="overview" class="active" aria-current="page">Обзор</a>
+        <a href="#repositories" data-nav="repositories">Репозитории</a>
+        <a href="#workflow" data-nav="workflow">В команде</a>
+        <a href="#actions" data-nav="actions">Автоматизация</a>
+      </nav>
+      <a class="header-cta" href="#practice">Попробовать <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="overview" class="page-panel" aria-labelledby="overview-title">
+      <div class="container hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span class="status-dot"></span> ОТКРЫВАЕМ МИР СОВМЕСТНОЙ РАЗРАБОТКИ</div>
+          <h1 id="overview-title">Большие идеи<br>начинаются<br><span>с коммита.</span></h1>
+          <p class="hero-description">GitHub — место, где код превращается в проекты.<br class="desktop-break"> Разберитесь, как хранить изменения, работать<br class="desktop-break"> в команде и создавать что-то своё.</p>
+          <div class="button-row"><a href="#repositories" class="button button-primary">Разобраться в GitHub <span aria-hidden="true">↗</span></a><button class="button button-text" data-open-cheatsheet><span class="code-symbol">&lt;/&gt;</span> Шпаргалка</button></div>
+          <div class="hero-note"><span class="small-avatars" aria-hidden="true"><span>↗</span><span>{ }</span><span>✓</span></span><span>Для тех, кто делает первый шаг.<br><strong>Без сложных слов. С живыми примерами.</strong></span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="photo-frame"><img src="images/photo1.png" alt="Рабочее место разработчика с ноутбуком в мягком свете монитора" width="1536" height="1024" fetchpriority="high"><div class="photo-shade"></div><span class="photo-label"><i></i> Идея → код → результат</span></div>
+          <div class="floating-commit"><span class="commit-symbol">✓</span><div><strong>Первый шаг сделан</strong><span>first commit <b>·</b> только что</span></div><span class="commit-hash">a1b2c3d</span></div>
+          <div class="visual-caption"><span>01 / ТВОЯ ИСТОРИЯ НАЧИНАЕТСЯ ЗДЕСЬ</span><span aria-hidden="true">↘</span></div>
+        </div>
+      </div>
+
+      <div class="concept-strip"><div class="container strip-inner"><span>КОД — ЭТО ТОЛЬКО НАЧАЛО</span><div><span>⌘</span> Храните идеи</div><div><span>⑂</span> Создавайте вместе</div><div><span>✓</span> Улучшайте каждый день</div></div></div>
+
+      <section class="container section-space" aria-labelledby="basics-title">
+        <div class="section-heading"><div><div class="eyebrow muted">01 — ОСНОВЫ</div><h2 id="basics-title">Один проект.<br>Общая история.</h2></div><p>Git запоминает изменения в файлах.<br>GitHub помогает хранить эту историю онлайн<br>и работать над ней вместе с другими.</p></div>
+        <div class="concept-grid">
+          <a href="#repositories" class="concept-card"><div class="card-top"><span class="line-icon">▤</span><span class="card-number">01</span></div><h3>Дом для вашего кода</h3><p>Файлы, документация и история изменений собраны в репозитории.</p><span class="card-link">О репозиториях <span>↗</span></span></a>
+          <a href="#workflow" class="concept-card"><div class="card-top"><span class="line-icon branch-icon">⑂</span><span class="card-number">02</span></div><h3>Место для команды</h3><p>Развивайте идеи в ветках, обсуждайте код и объединяйте лучшие решения.</p><span class="card-link">Как работать вместе <span>↗</span></span></a>
+          <a href="#actions" class="concept-card"><div class="card-top"><span class="line-icon">ϟ</span><span class="card-number">03</span></div><h3>Рутина на автопилоте</h3><p>Поручите GitHub Actions тесты, сборку и другие повторяющиеся задачи.</p><span class="card-link">Об автоматизации <span>↗</span></span></a>
+        </div>
+      </section>
+
+      <section class="container story-section" aria-labelledby="story-title">
+        <div class="story-photo"><img src="images/photo2.png" alt="Разработчики вместе обсуждают проект за ноутбуком" width="1536" height="1024" loading="lazy"><span class="image-credit">Изображение создано с помощью ИИ</span></div>
+        <div class="story-copy"><div class="eyebrow muted">02 — ОТ ЛИЧНОГО К ОБЩЕМУ</div><h2 id="story-title">Хороший код.<br>Ещё лучше — вместе.</h2><p>Кто-то предлагает идею, кто-то замечает ошибку, кто-то находит решение. GitHub соединяет эти шаги в понятный процесс.</p><div class="mini-flow"><span>Ветка</span><i>→</i><span>Изменение</span><i>→</i><span>Обсуждение</span><i>→</i><span class="flow-final">Merge</span></div><a href="#workflow" class="text-link">Пройти путь одного изменения <span>↗</span></a></div>
+      </section>
+
+      <section class="container practice-teaser"><div><div class="eyebrow">МЕНЬШЕ ТЕОРИИ. БОЛЬШЕ ПЕРВЫХ ШАГОВ.</div><h2>Ваш следующий проект<br>начинается с «Hello, world».</h2><a class="button button-primary" href="#practice">Перейти к практике <span>↗</span></a></div><img src="images/photo3.png" alt="Ноутбук, блокнот со схемой веток и чашка на рабочем столе" width="1536" height="1024" loading="lazy"></section>
+    </section>
+
+    <section id="repositories" class="page-panel" hidden aria-labelledby="repositories-title">
+      <div class="container page-intro"><div class="eyebrow">ГЛАВА 01 / РЕПОЗИТОРИИ</div><h1 id="repositories-title">У каждого проекта<br>есть <span>своя история.</span></h1><p>Репозиторий — это файлы проекта и история их изменений.<br>Откройте файлы в учебном примере и посмотрите, как всё устроено.</p></div>
+      <div class="container repo-layout"><div class="repo-browser"><div class="browser-bar"><span class="traffic-lights"><i></i><i></i><i></i></span><span>your-name / hello-world</span><span class="badge">Учебный пример</span></div><div class="repo-toolbar"><span class="branch-pill">⑂ main</span><span><i class="status-dot"></i> Initial commit</span><code>a1b2c3d</code></div><div class="file-browser"><div class="file-list" role="group" aria-label="Файлы учебного репозитория"><button class="file-button active" data-file="readme" aria-pressed="true"><span>▤</span> README.md</button><button class="file-button" data-file="html" aria-pressed="false"><span>◇</span> index.html</button><button class="file-button" data-file="css" aria-pressed="false"><span>◈</span> styles.css</button><button class="file-button" data-file="ignore" aria-pressed="false"><span>⊘</span> .gitignore</button></div><div class="file-preview" id="file-preview" aria-live="polite"></div></div><div class="browser-footer"><span>4 файла</span><span>Нажмите на файл, чтобы открыть его</span></div></div><div class="repo-explanation"><div class="eyebrow muted">ЧТО ВНУТРИ?</div><h2>Больше,<br>чем папка.</h2><dl><div><dt>Файлы</dt><dd>Код, изображения, настройки — всё, из чего состоит ваш проект.</dd></div><div><dt>Коммиты</dt><dd>Зафиксированные изменения с сообщением о том, что было сделано.</dd></div><div><dt>README</dt><dd>Главная инструкция: что это за проект и как его запустить.</dd></div></dl></div></div>
+      <section class="container section-space"><div class="section-heading"><div><div class="eyebrow muted">ИЗ ОБЛАКА НА КОМПЬЮТЕР</div><h2>Заберите проект с собой.</h2></div><p>Клонирование создаёт локальную копию<br>репозитория вместе с историей Git.</p></div><div class="command-box"><span class="terminal-prompt">$</span><code>git clone https://github.com/your-name/hello-world.git</code><button class="copy-button" data-copy="git clone https://github.com/your-name/hello-world.git" aria-label="Скопировать команду клонирования">Копировать <span>⧉</span></button></div><p class="helper-text">Замените your-name и hello-world на владельца и имя своего репозитория. Пример использует HTTPS.</p><div class="info-note"><span>i</span><p><strong>Git и GitHub — разные вещи.</strong> Git — система контроля версий на вашем компьютере. GitHub — платформа для размещения Git-репозиториев и совместной работы.</p></div><a href="#workflow" class="next-chapter"><span><small>СЛЕДУЮЩАЯ ГЛАВА</small>Как изменения попадают в общий проект</span><span>↗</span></a></section>
+    </section>
+
+    <section id="workflow" class="page-panel" hidden aria-labelledby="workflow-title">
+      <div class="container page-intro"><div class="eyebrow">ГЛАВА 02 / КОМАНДНАЯ РАБОТА</div><h1 id="workflow-title">Свобода пробовать.<br><span>Простота объединять.</span></h1><p>GitHub Flow — простой процесс работы с изменениями.<br>Выберите шаг и проследите путь от новой ветки до слияния.</p></div>
+      <div class="container"><div class="workflow-demo"><div class="workflow-track" role="group" aria-label="Шаги GitHub Flow"><button class="workflow-step active" data-step="0" aria-pressed="true"><span>01</span>Ветка</button><button class="workflow-step" data-step="1" aria-pressed="false"><span>02</span>Коммит</button><button class="workflow-step" data-step="2" aria-pressed="false"><span>03</span>Pull request</button><button class="workflow-step" data-step="3" aria-pressed="false"><span>04</span>Ревью</button><button class="workflow-step" data-step="4" aria-pressed="false"><span>05</span>Merge</button></div><div class="workflow-detail"><div><span class="eyebrow" id="step-eyebrow">ШАГ 01</span><h2 id="step-title">Дайте идее свою ветку.</h2><p id="step-description"></p><div class="inline-command"><code id="step-command"></code><button class="copy-button" id="copy-step" aria-label="Скопировать команду шага">⧉</button></div></div><div class="branch-visual" aria-label="Ветка feature создаётся от main и затем объединяется с ней"><div class="branch-label-main">main</div><div class="branch-label-feature">feature</div><svg viewBox="0 0 400 170" role="img" aria-label="Схема основной и рабочей ветки"><path class="main-line" d="M25 125H375"/><path class="feature-line" d="M85 125C115 125 105 45 145 45H260C300 45 295 125 335 125"/><g class="main-nodes"><circle cx="35" cy="125" r="7"/><circle cx="85" cy="125" r="7"/><circle cx="335" cy="125" r="7"/><circle cx="375" cy="125" r="7"/></g><g class="feature-nodes"><circle cx="155" cy="45" r="7"/><circle cx="205" cy="45" r="7"/><circle cx="255" cy="45" r="7"/></g><circle class="focus-node" cx="155" cy="45" r="13"/></svg><span class="diagram-caption">Одна идея — отдельная ветка</span></div></div></div></div>
+      <section class="container story-section section-space"><div class="story-photo"><img src="images/photo2.png" alt="Команда обсуждает изменения перед объединением кода" width="1536" height="1024" loading="lazy"></div><div class="story-copy"><div class="eyebrow muted">СНАЧАЛА — РАЗГОВОР</div><h2>Pull request —<br>приглашение к диалогу.</h2><p>В pull request видны изменения между ветками. Участники могут задавать вопросы, оставлять комментарии к строкам кода и предлагать правки.</p><p>Когда обсуждение и необходимые проверки закончены, изменения можно объединить с основной веткой.</p><a href="https://docs.github.com/en/get-started/using-github/github-flow" target="_blank" rel="noreferrer" class="text-link">GitHub Flow в официальной документации ↗</a></div></section>
+      <div class="container"><div class="info-note"><span>!</span><p><strong>Если возник конфликт слияния,</strong> Git не смог автоматически совместить изменения. Сначала выберите нужный вариант кода, сохраните решение и завершите слияние.</p></div><a href="#actions" class="next-chapter"><span><small>СЛЕДУЮЩАЯ ГЛАВА</small>Пусть проверки работают сами</span><span>↗</span></a></div>
+    </section>
+
+    <section id="actions" class="page-panel" hidden aria-labelledby="actions-title">
+      <div class="container page-intro"><div class="eyebrow">ГЛАВА 03 / GITHUB ACTIONS</div><h1 id="actions-title">Вы создаёте.<br><span>Actions проверяет.</span></h1><p>Опишите повторяемые задачи в workflow: по событию GitHub<br>запустит их на runner — машине, которая выполняет задания.</p></div>
+      <section class="container actions-grid"><div class="actions-copy"><div class="eyebrow muted">СОБЫТИЕ → WORKFLOW → РЕЗУЛЬТАТ</div><h2>Маленький файл.<br>Полезная привычка.</h2><p>Workflow хранится в YAML-файле в папке <code>.github/workflows/</code>. В примере каждый push запускает задание с одной командой.</p><ol class="numbered-list"><li><span>01</span><div><strong>Событие</strong><p>Новый push запускает workflow.</p></div></li><li><span>02</span><div><strong>Задание</strong><p>Runner с Ubuntu выполняет шаги.</p></div></li><li><span>03</span><div><strong>Результат</strong><p>Лог показывает, что произошло.</p></div></li></ol></div><div class="code-window"><div class="browser-bar"><span class="traffic-lights"><i></i><i></i><i></i></span><span>hello.yml</span><button class="copy-button" data-copy-id="workflow-code" aria-label="Скопировать YAML workflow">⧉</button></div><pre><code id="workflow-code"><span class="syntax-key">name:</span> Hello workflow
+<span class="syntax-key">on:</span> [push]
+
+<span class="syntax-key">jobs:</span>
+  <span class="syntax-key">hello:</span>
+    <span class="syntax-key">runs-on:</span> ubuntu-latest
+    <span class="syntax-key">steps:</span>
+      - <span class="syntax-key">name:</span> Say hello
+        <span class="syntax-key">run:</span> echo "Hello, GitHub!"</code></pre><div class="code-caption">.github/workflows/hello.yml</div></div></section>
+      <section class="container simulation"><div><div class="eyebrow">ПОСМОТРИТЕ НА ПРОЦЕСС</div><h2>Нажмите. И всё начнётся.</h2><p>Учебная симуляция запуска — прямо в браузере.</p></div><button id="run-workflow" class="button button-primary"><span>▶</span> Запустить пример</button><div class="run-console"><div class="run-console-header"><span id="run-status" role="status">○ Ожидает запуска</span><span>hello.yml <b>·</b> push</span></div><ol class="run-steps"><li data-run-step><span>○</span> Подготовка runner <small>—</small></li><li data-run-step><span>○</span> Say hello <small>—</small></li><li data-run-step><span>○</span> Завершение задания <small>—</small></li></ol><pre id="run-output" aria-live="polite">Лог появится после запуска.</pre></div><p class="helper-text">Это демонстрация интерфейса: команды не отправляются на GitHub. Реальные workflow запускаются в вашем репозитории.</p></section>
+      <div class="container"><a href="https://docs.github.com/en/actions/get-started/understand-github-actions" target="_blank" rel="noreferrer" class="text-link">Подробнее о GitHub Actions ↗</a><a href="#practice" class="next-chapter"><span><small>ДАЛЬШЕ — ВАША ОЧЕРЕДЬ</small>Создайте первый репозиторий</span><span>↗</span></a></div>
+    </section>
+
+    <section id="practice" class="page-panel" hidden aria-labelledby="practice-title">
+      <div class="container page-intro"><div class="eyebrow">ГЛАВА 04 / ПРАКТИКА</div><h1 id="practice-title">Первый репозиторий.<br><span>Первое «получилось».</span></h1><p>Пройдите короткий маршрут в GitHub и отмечайте готовые шаги.<br>Ваш прогресс сохраняется в этом браузере, если хранилище доступно.</p></div>
+      <div class="container practice-layout"><section class="checklist-card" aria-labelledby="checklist-title"><div class="checklist-heading"><h2 id="checklist-title">От идеи до репозитория</h2><span id="progress-count">0 / 5</span></div><div class="progress-track"><div id="progress-fill"></div></div><div class="practice-checklist"><label><input type="checkbox" data-task="account"><span class="custom-checkbox"></span><span><strong>Войдите в GitHub</strong><small>Создайте аккаунт или используйте существующий на github.com.</small></span></label><label><input type="checkbox" data-task="repo"><span class="custom-checkbox"></span><span><strong>Создайте репозиторий</strong><small>Нажмите New repository и задайте имя hello-world.</small></span></label><label><input type="checkbox" data-task="readme"><span class="custom-checkbox"></span><span><strong>Добавьте README</strong><small>При создании включите Add a README file и опишите идею.</small></span></label><label><input type="checkbox" data-task="branch"><span class="custom-checkbox"></span><span><strong>Создайте ветку и коммит</strong><small>В новой ветке измените README и сохраните изменение через Commit changes.</small></span></label><label><input type="checkbox" data-task="pr"><span class="custom-checkbox"></span><span><strong>Откройте pull request</strong><small>Сравните ветку с main, создайте pull request и объедините его.</small></span></label></div><p id="progress-message" role="status">Маленькие шаги тоже двигают проект вперёд.</p><div class="checklist-actions"><a href="https://github.com/new" target="_blank" rel="noreferrer" class="button button-primary">Открыть GitHub ↗</a><button id="reset-progress" class="button button-text">Сбросить</button></div></section><aside class="practice-aside"><div class="practice-image"><img src="images/photo3.png" alt="Рабочий стол для первых шагов в разработке" width="1536" height="1024" loading="lazy"></div><div class="aside-tip"><span class="line-icon">✳</span><h3>Начните с малого.</h3><p>Первым проектом может быть список полезных ссылок, конспект или этот самый сайт. Главное — начать сохранять историю.</p><a href="https://docs.github.com/en/get-started/start-your-journey/hello-world" target="_blank" rel="noreferrer" class="text-link">Официальный Hello World ↗</a></div></aside></div>
+      <section class="container quiz-section"><div class="section-heading"><div><div class="eyebrow muted">ПРОВЕРЬТЕ СЕБЯ</div><h2>Уже говорите на языке GitHub?</h2></div><p>Три вопроса, чтобы закрепить главное.</p></div><div id="quiz"></div></section>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-main"><a class="brand" href="#overview">GitHub<span class="brand-light">Guide</span><span class="brand-dot">.</span></a><p>От первой идеи — к общему результату.</p><button class="footer-cheatsheet" data-open-cheatsheet>Открыть шпаргалку ↗</button></div><div class="container footer-bottom"><span>Независимый учебный проект. Не является сайтом GitHub.<br>Фотографии сгенерированы с помощью ИИ.</span><a href="https://docs.github.com/" target="_blank" rel="noreferrer">Основано на документации GitHub ↗</a><span>СОЗДАВАЙТЕ. ДЕЛИТЕСЬ. УЛУЧШАЙТЕ.</span></div></footer>
+
+  <dialog id="cheatsheet" aria-labelledby="cheatsheet-title"><div class="dialog-header"><div><div class="eyebrow">ПУСТЬ БУДЕТ ПОД РУКОЙ</div><h2 id="cheatsheet-title">Шпаргалка по Git</h2></div><button class="icon-button close-dialog" aria-label="Закрыть шпаргалку">×</button></div><p class="dialog-description">Базовые команды для работы с локальным репозиторием.</p><label class="search-field"><span aria-hidden="true">⌕</span><input type="search" id="command-search" placeholder="Найти команду или действие…" aria-label="Поиск команды"></label><div id="command-list"></div><p class="dialog-footnote">Заменяйте имена веток, файлов и адрес репозитория на свои.</p></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><div class="noscript-notice">Для переключения глав и интерактивных примеров включите JavaScript. Основной обзор доступен выше.</div></noscript>
+</body>
+</html>
